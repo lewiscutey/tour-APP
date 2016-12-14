@@ -1027,13 +1027,42 @@ html, body {
     .jieshuo .swiper-container #page {
       position: absolute;
       bottom: 0.4rem; }
-  .jieshuo .process {
+  .jieshuo .time {
     width: 100%;
     height: 0.5rem;
     margin: 0.1rem auto 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("../img/jieshuo/process.png"); }
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+    .jieshuo .time .nowtime {
+      width: 0.8rem;
+      font-size: 0.3rem;
+      line-height: 0.5rem;
+      color: #FFFFFF; }
+    .jieshuo .time .time-regulate {
+      width: 5rem;
+      background: #323232;
+      height: 0.1rem;
+      position: relative; }
+      .jieshuo .time .time-regulate .time-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #0cc65b;
+        height: 0.1rem; }
+      .jieshuo .time .time-regulate .time-op {
+        width: 0.2rem;
+        height: 0.2rem;
+        background-color: #0965ff;
+        border-radius: 50%;
+        position: absolute;
+        top: -0.05rem;
+        left: -0.05rem; }
+    .jieshuo .time .alltime {
+      width: 0.8rem;
+      font-size: 0.3rem;
+      line-height: 0.5rem;
+      color: #FFFFFF; }
   .jieshuo .control {
     width: 100%;
     height: 1.8rem;
@@ -1053,6 +1082,8 @@ html, body {
       background-repeat: no-repeat;
       background-image: url("../img/jieshuo/play.png");
       margin: 0 0.5rem; }
+      .jieshuo .control .play.active {
+        background-image: url("../img/jieshuo/pause.png"); }
     .jieshuo .control .next {
       width: 1.4rem;
       height: 1.4rem;
@@ -1171,6 +1202,10 @@ html, body {
         height: 3.05rem;
         background-size: cover;
         background-repeat: no-repeat; }
+        .tingshuo .ykyyb .yk .yyb a {
+          display: block;
+          width: 100%;
+          height: 100%; }
         .tingshuo .ykyyb .yk .yyb:nth-child(1) {
           background-image: url("../img/tingshuo/yk1.png"); }
         .tingshuo .ykyyb .yk .yyb:nth-child(2) {
