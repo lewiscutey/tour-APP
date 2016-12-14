@@ -46,6 +46,10 @@ html,body{
 
 .icon-fenxiang:before { content: "\e631"; }
 
+.icon-queding:before { content: "\e6a3"; }
+
+.icon-kaishi:before { content: "\e608"; }
+
 .icon-wode:before { content: "\e6b1"; }
 
 .icon-103:before { content: "\e65b"; }
@@ -59,6 +63,8 @@ html,body{
 .icon-jiantouyou:before { content: "\e609"; }
 
 .icon-wz:before { content: "\e604"; }
+
+.icon-kaishi1:before { content: "\e796"; }
 
 .icon-wenda:before { content: "\e610"; }
 
@@ -809,6 +815,11 @@ html,body{
         height: 1.8rem;
         background-size: cover;
         background-repeat: no-repeat;
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
         &:nth-child(1){
           background-image: url("../img/shouye/wode/list1.png");
         }
@@ -1379,6 +1390,15 @@ html,body{
       background-image: url("../img/tingshuo/ykyyb.png");
       background-size: cover;
       background-repeat: no-repeat;
+      position: relative;
+      a{
+        width: 1rem;
+        height: 1rem;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
     }
     .yk{
       width: 100%;
@@ -1412,6 +1432,152 @@ html,body{
         }
       }
 
+    }
+  }
+}
+
+//录音页
+.luyin{
+  width: 100%;
+  height:100%;
+  background-image: url("../img/luyin/xiantiao.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 0.2rem;
+  position: relative;
+  .head{
+    width: 100%;
+    height: 0.88rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1b1b22;
+    .back{
+      width: 0.54rem;
+      height: 0.54rem;
+      background-image: url("../img/wanle/back.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    h3{
+      font-size: 0.4rem;
+      color: #FFFFFF;
+    }
+    .menu{
+      width: 0.8rem;
+      height: 0.54rem;
+      background-image: url("../img/wanle/menu.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  .time{
+    width: 100%;
+    margin-top: 1.2rem;
+    h3{
+      width: 100%;
+      height: 0.6rem;
+      font-size: 0.4rem;
+      font-weight:bolder;
+      text-align: center;
+      line-height: 0.6rem;
+      color: #FFFFFF;
+    }
+    h4{
+      width: 100%;
+      height: 1rem;
+      font-size: 0.6rem;
+      font-weight:100;
+      text-align: center;
+      line-height: 1rem;
+      color: #FFFFFF;
+    }
+    .control{
+      width: 100%;
+      height:2rem;
+      margin-top: 4.5rem;
+      padding: 0 1.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      i{
+        font-size: 1.25rem;
+        color: #FFFFFF;
+        line-height: 2rem;
+        &:nth-last-child(1){
+          margin-top:-0.3rem;
+          font-size: 1.28rem;
+        }
+        &.icon-kaishi{
+          margin-top: -0.2rem;
+        }
+      }
+    }
+  }
+  .jianjie{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:1;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    .content{
+      width:6rem;
+      height: 4rem;
+      background-color: #FFFFFF;
+      border-radius: 0.15rem;
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      margin: auto;
+      .title{
+        width: 100%;
+        height: 3rem;
+        padding: 0.5rem 0.3rem;
+        border-bottom:1px solid rgba(0, 0, 0, 0.5);
+        p{
+          text-align: center;
+          line-height:1rem;
+          font-size: 0.3rem;
+          color: #000000;
+          input{
+            outline: none;
+            border: none;
+            background-color: transparent;
+            border-bottom:1px solid #000000;
+            margin-left: 0.2rem;
+          }
+        }
+      }
+      .confirm{
+        width: 100%;
+        height:1rem;
+        a{
+          display: block;
+          width: 50%;
+          height: 100%;
+          float: left;
+          p{
+            font-size: 0.5rem;
+            color: #000000;
+            line-height:1rem;
+            text-align: center;
+            &:nth-child(1){
+              border-right:1px solid rgba(0, 0, 0, 0.5);
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -1638,9 +1804,222 @@ html,body{
   }
 }
 
+//行程页
+.xingcheng{
+  width: 100%;
+  .head{
+    width: 100%;
+    height: 0.88rem;
+    padding: 0 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1b1b22;
+    .back{
+      width: 0.54rem;
+      height: 0.54rem;
+      background-image: url("../img/wanle/back.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    h3{
+      font-size: 0.4rem;
+      color: #FFFFFF;
+    }
+    .menu{
+      width: 0.8rem;
+      height: 0.54rem;
+      background-image: url("../img/wanle/menu.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  .list{
+    width: 100%;
+    .item{
+      width: 100%;
+      height: 5.45rem;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      &:nth-child(1){
+        background-image: url("../img/xingcheng/list1.png");
+      }
+      &:nth-child(2){
+        background-image: url("../img/xingcheng/list2.png");
+      }
+    }
+  }
+  .add{
+    width: 0.75rem;
+    height: 0.75rem;
+    margin: 0.4rem auto;
+    background-image: url("../img/xingcheng/add.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
 
+//帖子页
+.tiezi{
+  width: 100%;
+  .head{
+    width: 100%;
+    height: 0.88rem;
+    padding: 0 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1b1b22;
+    .back{
+      width: 0.54rem;
+      height: 0.54rem;
+      background-image: url("../img/wanle/back.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    h3{
+      font-size: 0.4rem;
+      color: #FFFFFF;
+    }
+    .menu{
+      width: 1.2rem;
+      height: 0.88rem;
+      margin-right: 0.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      i{
+        color: #FFFFFF;
+        font-size: 0.3rem;
+        &:nth-child(1){
+          margin-top: 0.08rem;
+        }
+        &.active{
+          color: #00aa00;
+        }
+      }
+    }
+  }
+  .title{
+    width: 100%;
+    height: 3.2rem;
+    padding:0.3rem;
+    border-bottom:1px solid #707071;
+    h3{
+      img{
+        width: 0.4rem;
+        height: 0.4rem;
+        vertical-align: text-top;
+      }
+      font-size: 0.4rem;
+      color: #707071;
+      line-height: 0.7rem;
+      text-align: left;
+    }
+    h4{
+      font-size: 0.4rem;
+      color: #707071;
+      line-height: 0.7rem;
+      text-align: right;
+    }
+    .author{
+      width: 100%;
+      height: 1.3rem;
+      padding: 0.1rem;
+      .img{
+        width: 0.9rem;
+        height: 0.9rem;
+        margin: 0.1rem;
+        float: left;
+        background-image: url("../img/tiezi/hai.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .word{
+        width: 5rem;
+        height: 1rem;
+        float: left;
+        margin-left: 0.2rem;
+        padding: 0;
+        p{
+          line-height:0.5rem;
+          &:nth-child(1){
+            font-size: 0.24rem;
+            color: #000000;
+            font-weight: bold;
+          }
+          &:nth-child(2){
+            font-size: 0.18rem;
+            color: #707071;
+          }
+        }
+      }
+    }
+  }
+  .banner{
+    width: 100%;
+    height: 4.3rem;
+    padding: 0.3rem;
+    background-image: url("../img/tiezi/banner.png");
+    background-size: 90% 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .word{
+    width: 100%;
+    padding: 0.3rem;
+    color: #7a7979;
+    font-size:0.24rem;
+    p{
+      line-height: 0.5rem;
+      padding-left: 0.05rem;
+    }
+  }
+  .input{
+    width: 100%;
+    height: 1rem;
+    position: fixed;
+    bottom:0;
+    z-index:2;
+    text-align: center;
+    line-height:0.6rem;
+    background-color: #ebe9e9;
+    input{
+      outline: none;
+      width: 5.5rem;
+      height: 0.6rem;
+      border-radius: 0.15rem;
+      line-height: 0.6rem;
+      font-size: 0.3rem;
+      color: #2C3E50;
+      border: 1px solid rgba(0, 0, 170, 0.47);
+    }
+    span{
+      margin-left:0.2rem;
+      font-size: 0.3rem;
+      color: #3c41aa;
+    }
+  }
 
-
+}
 
 
 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="x5-orientation" content="portrait | landscape" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="screen-orientation" content="portrait">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.jquery.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/index.js"></script>
+    <title>旅游APP</title>
+</head>
+<body>
+<div class="tiezi">
+    <div class="head">
+        <div class="back"><a href="shouye.html"></a></div>
+        <h3>我的帖子</h3>
+        <div class="menu">
+            <i class="iconfont icon-aixin"></i>
+            <i class="iconfont icon-fenxiang"></i>
+        </div>
+    </div>
+    <div class="title">
+        <h3><img src="img/tiezi/jing.png" alt="">天边的乌尤尼，玻利维亚天空之境</h3>
+        <h4>----海盗王基德</h4>
+        <div class="author">
+            <div class="img"></div>
+            <div class="word">
+                <p>海盗王基德</p>
+                <p>125回复&nbsp;&nbsp;|&nbsp;&nbsp;388收藏&nbsp;&nbsp;|&nbsp;&nbsp;54367浏览</p>
+            </div>
+        </div>
+    </div>
+    <div class="banner"></div>
+    <div class="word">
+        <p>前言</p>
+        <p>这是迟到了一整年的游记，因为我想留出来一大段可以静下心来的充裕时间，好让自己能在那些被照片所定格的时间里缓慢的梳理脑海里的记忆。</p>
+        <p>因为这场旅行，对我来说意义非凡！</p>
+    </div>
+    <div class="input">
+        <input type="text" placeholder="回复楼主：">
+        <span>发送</span>
+    </div>
+
+</div>
+</body>
+<script>
+    window.onload =function () {
+        $(".tiezi .head .menu i").on("click",function () {
+           $(this).toggleClass("active");
+        });
+    }
+</script>
+</html>

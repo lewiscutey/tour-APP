@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="x5-orientation" content="portrait | landscape" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="screen-orientation" content="portrait">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.jquery.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/index.js"></script>
+    <title>旅游APP</title>
+</head>
+<body>
+<div class="luyin">
+    <div class="head">
+        <div class="back"><a href="tingshuo.html"></a></div>
+        <h3>录制语音包</h3>
+        <div class="menu"></div>
+    </div>
+    <div class="time">
+        <h3>开始录音</h3>
+        <h4>00:00:00</h4>
+        <div class="control">
+            <i class="iconfont icon-kaishi1"></i>
+            <i class="iconfont icon-queding"></i>
+        </div>
+    </div>
+    <div class="jianjie">
+        <div class="content">
+            <div class="title">
+                <p>标题 <input type="text"></p>
+                <p>简介 <input type="text"></p>
+            </div>
+            <div class="confirm">
+                <a href="javascript:;"><p>取消</p></a>
+                <a href="tingshuo.html"><p>确定</p></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    window.onload = function () {
+
+        var time = $('.luyin .time h4');
+        var times = 0;
+        var flag = true;
+        var t = 0;
+        function getTime(){
+            time.text(gettime(times+=1));
+        }
+
+        function gettime(time){
+            if(isNaN(time)){
+                return '00:--:--';
+            };
+            var min=Math.floor(time/60);
+            var sec=parseInt(time%60);
+            if(sec<10){
+                sec='0'+sec;
+            }
+            if(min<10){
+                min='0'+min;
+            }
+            return "00:"+min+':'+sec;
+        };
+
+        $(".luyin .time .control i:nth-child(1)").on("click",function () {
+            $(this).toggleClass("icon-kaishi1").toggleClass("icon-kaishi");
+            if(flag){
+                t = setInterval(getTime,1000);
+                flag = false;
+            }else{
+                clearInterval(t);
+                flag = true;
+            }
+
+        });
+        $(".luyin .time .control i:nth-child(2)").on("click",function () {
+            $(".luyin .jianjie").css("display","block");
+            clearInterval(t);
+            flag = true;
+            $(".luyin .time .control i:nth-child(1)").toggleClass("icon-kaishi1").toggleClass("icon-kaishi");
+        });
+        $(".luyin .jianjie .confirm a:nth-child(1)").on("click",function () {
+            $(".luyin .jianjie").css("display","none");
+        });
+
+
+
+    }
+</script>
+</html>
