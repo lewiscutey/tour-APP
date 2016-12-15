@@ -98,7 +98,7 @@ $(function () {
             audio.play();
         }else{
             audio.pause();
-        };
+        }
     });
 
     audios.on('play',function(){
@@ -199,11 +199,12 @@ $(function () {
     audio.ontimeupdate=function () {
         Nowtime.text(getTime(audio.currentTime));
         timeOp.css({left:timeRegulate.width()*(audio.currentTime/audio.duration)});
+        timeBar.css({width:timeRegulate.width()*(audio.currentTime/audio.duration)});
         timeOp.on('touchstart',false);
     };
 
     timeRegulate.on('touchstart',function (e) {
-        audio.currentTime = parseInt(audio.duration*(e.offsetX+timeOp.width()/2+4)/timeRegulate.width());
+        audio.currentTime = parseInt(audio.duration*(e.x+timeOp.width()/2+4)/timeRegulate.width());
         audio.ontimeupdate=function () {
             Nowtime.text(getTime(audio.currentTime));
             timeBar.css({width:timeRegulate.width()*(audio.currentTime/audio.duration)});
@@ -215,7 +216,7 @@ $(function () {
     timeOp.on('touchstart',function(e){
         e.preventDefault();
         $(document).on('touchmove',function(e){
-            var ww=(e.pageX-timeOp.offsetX)/timeRegulate.width()*audio.duration;
+            var ww=(e.x-timeOp.offsetX)/timeRegulate.width()*audio.duration;
             ww=ww>=audio.duration?audio.duration:ww;
             ww=ww<=0?0:ww;
             audio.currentTime=ww;
