@@ -1259,6 +1259,7 @@ html,body{
       width: 5rem;
       background: #323232;
       height: 0.1rem;
+      border-radius: 0.05rem;
       position: relative;;
       .time-bar{
         position: absolute;
@@ -1266,6 +1267,7 @@ html,body{
         left: 0;
         background: #0cc65b;
         height: 0.1rem;
+        border-radius: 0.05rem;
       }
       .time-op{
         width: 0.2rem;
