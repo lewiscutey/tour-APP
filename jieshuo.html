@@ -14,26 +14,46 @@
     <script src="js/swiper.jquery.js"></script>
     <script src="js/swiper.animate1.0.2.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/jieshuo.js"></script>
     <title>旅游APP</title>
 </head>
 <body>
 <div class="jieshuo">
-    <audio style="display:none" src="mp3/宋冬野 - 斑马,斑马.mp3" controls id="audio"></audio>
+    <audio style="display:none" src="mp3/红玫瑰.mp3" controls id="audio"></audio>
     <div class="head">
         <div class="back"><a href="ditu.html"></a></div>
         <h3>迪士尼语音解说</h3>
-        <div class="menu"></div>
+        <div class="menu">
+            <i class="iconfont icon-uilist"></i>
+            <ul class="list"></ul>
+        </div>
     </div>
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-
+                <h3><b>——</b><span>林志玲</span><b>——</b></h3>
+                <div class="img">
+                    <img src="img/music/lzl.png" alt="">
+                </div>
             </div>
             <div class="swiper-slide">
-
+                <div class="lyric"></div>
             </div>
             <div class="swiper-slide">
-
+                <ul class="info">
+                    <li>
+                        <img src="img/music/lzl.png" alt="">
+                        <span>解说者：<samp>林志玲</samp></span>
+                    </li>
+                    <li>
+                        <img src="img/music/zhuanji.png" alt="">
+                        <span>专辑：<samp>香港景点</samp></span>
+                    </li>
+                    <li>
+                        <img src="img/music/qita.png" alt="">
+                        <span>其他相关</span>
+                    </li>
+                </ul>
             </div>
         </div>
         <!-- 分页器 -->
@@ -52,7 +72,7 @@
         <div class="play" title="播放"></div>
         <div class="next" title="下一首"></div>
     </div>
-    <div class="list">
+    <div class="list-item">
         <i class="iconfont icon-aixin"></i>
         <i class="iconfont icon-xiazai"></i>
         <i class="iconfont icon-fenxiang"></i>
@@ -66,167 +86,8 @@
     $(".jieshuo .list i").on("click",function () {
        $(this).toggleClass("active");
     });
-</script>
-<script>
-$(function () {
-
-    //歌曲列表1
-    var musics = [
-        {path:'mp3/宋冬野 - 斑马,斑马.mp3',name:'斑马,斑马',artistan:'宋冬野',duration:'04:13',src:'img/banma.jpg'},
-        {path:'mp3/宋冬野 - 莉莉安.mp3',name:'莉莉安',artistan:'宋冬野',duration:'04:13',src:'img/lilian.jpg'},
-        {path:'mp3/庄心妍 - 走着走着就散了.mp3',name:'走着走着就散了',artistan:'庄心妍',duration:'04:28',src:'img/zouzhe.jpg'},
-        {path:'mp3/张赫宣 - 我们不该这样的.mp3',name:'我们不该这样的',artistan:'张赫宣',duration:'03:46',src:'img/women.jpg'},
-        {path:'mp3/薛之谦 - 丑八怪.mp3',name:'丑八怪',artistan:'薛之谦',duration:'04:13',src:'img/choubaguai.jpg'},
-        {path:'mp3/薛之谦 - 你还要我怎样.mp3',name:'你还要我怎样',artistan:'薛之谦',duration:'05:03',src:'img/nihaiyao.jpg'},
-        {path:'mp3/薛之谦 - 演员.mp3',name:'演员',artistan:'薛之谦',duration:'04:21',src:'img/yanyuan.jpg'},
-        {path:'mp3/陈楚生 - 有没有人告诉你.mp3',name:'有没有人告诉你',artistan:'陈楚生',duration:'05:43',src:'img/youmeiyou.jpg'}
-    ];
-
-
-//获取一系列对象
-    var audios = $('#audio');
-    var audio = $('audio').get(0);
-    var play = $('.jieshuo .control .play');
-    var prev = $('.jieshuo .control .prev');
-    var next = $('.jieshuo .control .next');
-    var index = 0;
-    var currentIndex = 0;
-
-// 播放按钮
-    play.on('click',function(){
-        if(audio.paused){
-            audio.play();
-        }else{
-            audio.pause();
-        }
+    $(".jieshuo .head .menu").on("click",function () {
+        $(this).find(".list").toggle();
     });
-
-    audios.on('play',function(){
-        play.addClass('active');
-    });
-    audios.on('pause',function(){
-        play.removeClass('active');
-    });
-
-// 在播放时调用时间函数
-    audio.onplay = function(){
-        $(this).triggerHandler('timeupdate');
-    };
-
-//上下首切歌
-    next.on('click',function(){
-        currentIndex ++;
-        if(currentIndex>musics.length-1){
-            currentIndex = 0;
-        }
-        audio.src = musics[currentIndex].path;
-        audio.play();
-    });
-    prev.on('click',function(){
-        currentIndex --;
-        if(currentIndex<0){
-            currentIndex=musics.length-1;
-        }
-        audio.src=musics[currentIndex].path;
-        audio.play();
-    });
-
-//播放列表点歌
-//    $('.music-list').on('click',"li",function () {
-//        currentIndex = $(this).index();
-//        audio.src = musics[currentIndex].path;
-//        audio.play();
-//    });
-
-
-//歌词滚动
-   /* $(function() {
-        var $this = $("#box");
-        var scrollTimer;
-        scrollTimer = setInterval(function() {
-            scrollNews($this);
-        },3000);
-
-        function scrollNews(obj) {
-            var $self = obj.find("ul");
-            var lineHeight = $self.find("li:first").height();
-            $self.find("li").each(function () {
-                $(this).css('color','#ffffff');
-            });
-            $self.find("li").eq(5).css('color','#0CC65B');
-            $self.animate({
-                "marginTop": -lineHeight + "px"
-            },500, function() {
-                $self.css({
-                    marginTop: 0
-                }).find("li:first").appendTo($self);
-            });
-        }
-
-    });*/
-
-
-//处理列表界面
-    audios.on('play',function () {
-        $('.jieshuo .time .alltime').text(musics[currentIndex].duration);
-    });
-
-//时间条
-    var time = $('.jieshuo .time');
-    var Nowtime = $('.jieshuo .time .nowtime');
-    var Alltime = $('.jieshuo .time .alltime');
-    var timeRegulate = $('.jieshuo .time .time-regulate');
-    var timeBar = $('.jieshuo .time .time-regulate .time-bar');
-    var timeOp= $('.jieshuo .time .time-regulate .time-op');
-
-//获取时间函数
-    function getTime(time){
-        if(isNaN(time)){
-            return '--:--';
-        };
-        var min=Math.floor(time/60);
-        var sec=parseInt(time%60);
-        if(sec<10){
-            sec='0'+sec
-        }
-        if(min<10){
-            min='0'+min
-        }
-        return min+':'+sec;
-    };
-
-//进度条
-    audio.ontimeupdate=function () {
-        Nowtime.text(getTime(audio.currentTime));
-        timeOp.css({left:timeRegulate.width()*(audio.currentTime/audio.duration)});
-        timeBar.css({width:timeRegulate.width()*(audio.currentTime/audio.duration)});
-        timeOp.on('touchstart',false);
-    };
-
-    timeRegulate.on('touchstart',function (e) {
-        audio.currentTime = parseInt(audio.duration*(e.x+timeOp.width()/2+4)/timeRegulate.width());
-        audio.ontimeupdate=function () {
-            Nowtime.text(getTime(audio.currentTime));
-            timeBar.css({width:timeRegulate.width()*(audio.currentTime/audio.duration)});
-            timeOp.css({left:timeRegulate.width()*(audio.currentTime/audio.duration)-timeOp.width()/2});
-        };
-    });
-
-//拖动进度条
-    timeOp.on('touchstart',function(e){
-        e.preventDefault();
-        $(document).on('touchmove',function(e){
-            var ww=(e.x-timeOp.offsetX)/timeRegulate.width()*audio.duration;
-            ww=ww>=audio.duration?audio.duration:ww;
-            ww=ww<=0?0:ww;
-            audio.currentTime=ww;
-        });
-        $(document).on('touchend',function(){
-            $(document).off('touchmove');
-            $(document).off('touchend');
-        });
-    });
-
-});
 </script>
 </html>

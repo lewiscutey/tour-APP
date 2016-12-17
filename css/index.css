@@ -82,6 +82,9 @@ html, body {
 .icon-xiaoxi:before {
   content: "\e60d"; }
 
+.icon-uilist:before {
+  content: "\e600"; }
+
 .swiper-container {
   width: 100%;
   height: 100%; }
@@ -1005,28 +1008,162 @@ html, body {
       color: #FFFFFF; }
     .jieshuo .head .menu {
       width: 0.8rem;
-      height: 0.54rem;
-      background-image: url("../img/xianggang/menu.png");
-      background-size: cover;
-      background-repeat: no-repeat; }
+      height: 0.8rem;
+      position: relative; }
+      .jieshuo .head .menu i {
+        font-size: 0.4rem;
+        color: #FFFFFF;
+        display: block;
+        margin: 0.2rem; }
+      .jieshuo .head .menu .list {
+        width: 6rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 0.88rem;
+        right: 0;
+        z-index: 10;
+        padding: 0.2rem 0.3rem;
+        border-radius: 0.2rem;
+        display: none; }
+        .jieshuo .head .menu .list li {
+          width: 100%;
+          color: #00AA88;
+          font-size: 0.3rem;
+          line-height: 0.5rem;
+          position: relative; }
+          .jieshuo .head .menu .list li span1 {
+            display: inline-block;
+            width: 2rem; }
+          .jieshuo .head .menu .list li span2 {
+            display: inline-block;
+            width: 1rem;
+            margin-left: 0.3rem; }
+          .jieshuo .head .menu .list li span4 {
+            position: absolute;
+            bottom: 0.15rem;
+            right: -0.18rem;
+            width: 2rem;
+            display: block; }
+            .jieshuo .head .menu .list li span4 samp1 {
+              width: 0.3rem;
+              height: 0.24rem;
+              float: left;
+              margin-left: 0.1rem;
+              background: url(../img/music/bg.png) -32px -128px; }
+              .jieshuo .head .menu .list li span4 samp1:hover {
+                background: url(../img/music/bg.png) -32px -146px; }
+            .jieshuo .head .menu .list li span4 samp2 {
+              width: 0.3rem;
+              height: 0.24rem;
+              float: left;
+              margin-left: 0.1rem;
+              background: url(../img/music/bg.png) -47px -128px; }
+              .jieshuo .head .menu .list li span4 samp2:hover {
+                background: url(../img/music/bg.png) -47px -146px; }
+            .jieshuo .head .menu .list li span4 samp3 {
+              width: 0.3rem;
+              height: 0.24rem;
+              float: left;
+              margin-left: 0.1rem;
+              background: url(../img/music/bg.png) -64px -128px; }
+              .jieshuo .head .menu .list li span4 samp3:hover {
+                background: url(../img/music/bg.png) -64px -146px; }
+            .jieshuo .head .menu .list li span4 samp4 {
+              width: 0.3rem;
+              height: 0.24rem;
+              float: left;
+              margin-left: 0.1rem;
+              background: url(../img/music/bg.png) -95px -128px; }
+              .jieshuo .head .menu .list li span4 samp4:hover {
+                background: url(../img/music/bg.png) -80px -146px; }
+          .jieshuo .head .menu .list li:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #ffffff; }
+          .jieshuo .head .menu .list li.active {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #0CC65B; }
   .jieshuo .swiper-container {
     width: 100%;
-    height: 9rem;
-    position: relative; }
+    height: 9rem; }
+    .jieshuo .swiper-container #page {
+      position: absolute;
+      bottom: 0.1rem; }
     .jieshuo .swiper-container .swiper-slide {
       width: 100%;
       height: 100%;
       background-size: 100%;
       background-repeat: no-repeat; }
       .jieshuo .swiper-container .swiper-slide:nth-child(1) {
-        background-image: url("../img/jieshuo/slide1.png"); }
+        background-image: none; }
+        .jieshuo .swiper-container .swiper-slide:nth-child(1) h3 {
+          width: 5rem;
+          height: 1rem;
+          text-align: center;
+          font-size: 0.4rem;
+          color: #464646;
+          margin: 0 auto; }
+          .jieshuo .swiper-container .swiper-slide:nth-child(1) h3 b {
+            line-height: 1rem;
+            display: inline-block;
+            margin-top: -0.5rem; }
+          .jieshuo .swiper-container .swiper-slide:nth-child(1) h3 span {
+            width: 2rem;
+            height: 1rem;
+            line-height: 1rem;
+            color: #b4b4b4;
+            display: inline-block; }
+        .jieshuo .swiper-container .swiper-slide:nth-child(1) .img {
+          width: 5.5rem;
+          height: 5.5rem;
+          margin: 1rem auto;
+          background-image: url("../img/jieshuo/touxiang.png");
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-position: center; }
+          .jieshuo .swiper-container .swiper-slide:nth-child(1) .img img {
+            width: 5rem;
+            height: 5rem;
+            margin: 0.25rem; }
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
       .jieshuo .swiper-container .swiper-slide:nth-child(2) {
-        background-image: url("../img/jieshuo/slide2.png"); }
+        background-image: none; }
+        .jieshuo .swiper-container .swiper-slide:nth-child(2) .lyric {
+          width: 100%;
+          height: 90%;
+          margin: 0 auto;
+          padding: 0.2rem 0;
+          overflow: hidden; }
+          .jieshuo .swiper-container .swiper-slide:nth-child(2) .lyric p {
+            font-size: 0.3rem;
+            height: 0.5rem;
+            line-height: 0.5rem;
+            color: #ccc;
+            text-align: center; }
+            .jieshuo .swiper-container .swiper-slide:nth-child(2) .lyric p.active {
+              color: #fffc24;
+              font-size: 0.34rem; }
       .jieshuo .swiper-container .swiper-slide:nth-child(3) {
-        background-image: url("../img/jieshuo/slide3.png"); }
-    .jieshuo .swiper-container #page {
-      position: absolute;
-      bottom: 0.4rem; }
+        background-image: none; }
+        .jieshuo .swiper-container .swiper-slide:nth-child(3) .info {
+          width: 100%;
+          padding: 0.3rem; }
+          .jieshuo .swiper-container .swiper-slide:nth-child(3) .info li {
+            width: 100%;
+            height: 1.5rem;
+            border-bottom: 1px solid #00AA88; }
+            .jieshuo .swiper-container .swiper-slide:nth-child(3) .info li img {
+              width: 1rem;
+              height: 1rem;
+              margin: 0.25rem;
+              vertical-align: middle; }
+            .jieshuo .swiper-container .swiper-slide:nth-child(3) .info li span {
+              font-size: 0.5rem;
+              color: #c0c0c0; }
   .jieshuo .time {
     width: 100%;
     height: 0.5rem;
@@ -1092,16 +1229,16 @@ html, body {
       background-size: cover;
       background-repeat: no-repeat;
       background-image: url("../img/jieshuo/next.png"); }
-  .jieshuo .list {
+  .jieshuo .list-item {
     width: 100%;
     height: 1rem;
     display: flex;
     justify-content: space-around;
     align-items: center; }
-    .jieshuo .list i {
+    .jieshuo .list-item i {
       color: #c2c2c2;
       font-size: 0.5rem; }
-      .jieshuo .list i.active {
+      .jieshuo .list-item i.active {
         color: #00aa00; }
 
 .tingshuo {
