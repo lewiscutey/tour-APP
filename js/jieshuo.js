@@ -359,8 +359,8 @@ $(function () {
 
     };
 
-    timeRegulate.on('touchstart',function (e) {
-        audio.currentTime = parseInt(audio.duration*(e.x+timeOp.width()/2+4)/timeRegulate.width());
+    timeRegulate.get(0).addEventListener('touchstart',function (e) {
+        audio.currentTime = parseInt(audio.duration*(e.touches[0].pageX+timeOp.width()/2-70)/timeRegulate.width());
         audio.ontimeupdate=function () {
             Nowtime.text(getTime(audio.currentTime));
             timeBar.css({width:timeRegulate.width()*(audio.currentTime/audio.duration)});
@@ -369,17 +369,17 @@ $(function () {
     });
 
 //拖动进度条
-    timeOp.on('touchstart',function(e){
+    timeOp.get(0).addEventListener('touchstart',function(e){
         e.preventDefault();
-        $(document).on('touchmove',function(e){
-            var ww=(e.x-timeOp.offsetX)/timeRegulate.width()*audio.duration;
+        document.addEventListener('touchmove',function(e){
+            var ww=parseInt((e.touches[0].pageX-timeOp.get(0).clientLeft-60)/timeRegulate.width()*audio.duration);
             ww=ww>=audio.duration?audio.duration:ww;
             ww=ww<=0?0:ww;
             audio.currentTime=ww;
         });
-        $(document).on('touchend',function(){
-            $(document).off('touchmove');
-            $(document).off('touchend');
+        document.addEventListener('touchend',function(){
+            document.removeEventListener("touchmove",false);
+            document.removeEventListener("touchend",false);
         });
     });
 
