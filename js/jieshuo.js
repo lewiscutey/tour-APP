@@ -297,6 +297,10 @@ $(function () {
         $('.jieshuo .swiper-slide:nth-child(3) .info li:nth-child(1) img').attr("src",musics[currentIndex].src);
         $('.jieshuo .swiper-slide:nth-child(3) .info li:nth-child(1) span samp').text(musics[currentIndex].artistan);
     });
+    audios.on('pause',function () {
+        $('.jieshuo .swiper-slide:nth-child(1) .img img').attr("src",musics[currentIndex].src).css("animation","none");
+    });
+
 
 //删除列表上的歌曲
     $('.jieshuo .head .list li span4 samp2').on('click',function (e) {
