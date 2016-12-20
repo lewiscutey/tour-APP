@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="x5-orientation" content="portrait | landscape" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="screen-orientation" content="portrait">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.jquery.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/index.js"></script>
+    <title>旅游APP</title>
+</head>
+<body>
+<div class="xingcheng3">
+    <div class="head">
+        <div class="back"><a href="xingcheng2.html"></a></div>
+        <h3>我的行程</h3>
+        <div class="menu"></div>
+    </div>
+    <div class="buzhou">
+        <h2>Step3</h2>
+        <h3>旅行偏好</h3>
+    </div>
+    <div class="zhuti">
+        <p>
+            <img src="img/xingcheng1/zhuti.png" alt="">
+            <span>旅行主题</span>
+        </p>
+        <div class="list">
+            <div class="item active">
+                <i class="iconfont icon-shoucifuwushijian"></i>
+                <span>首次</span>
+            </div>
+            <div class="item">
+                <i class="iconfont icon-qinzi"></i>
+                <span>亲子</span>
+            </div>
+            <div class="item">
+                <i class="iconfont icon-iconfontmeishi0"></i>
+                <span>美食</span>
+            </div>
+            <div class="item">
+                <i class="iconfont icon-gouwu"></i>
+                <span>购物</span>
+            </div>
+            <div class="item">
+                <i class="iconfont icon-ziranqiguan"></i>
+                <span>自然</span>
+            </div>
+            <div class="item">
+                <i class="iconfont icon-diliweizhi"></i>
+                <span>人文</span>
+            </div>
+        </div>
+    </div>
+    <div class="jinchou">
+        <p>
+            <img src="img/xingcheng1/jinchou.png" alt="">
+            <span>行程紧凑度</span>
+        </p>
+        <div class="list">
+            <div class="item">宽松</div>
+            <div class="item active">正常</div>
+            <div class="item">紧凑</div>
+        </div>
+    </div>
+    <div class="jiudian">
+        <p>
+            <img src="img/xingcheng1/jiudian.png" alt="">
+            <span>酒店档位</span>
+        </p>
+        <div class="list">
+            <div class="item">经济</div>
+            <div class="item active">试用</div>
+            <div class="item">奢华</div>
+        </div>
+    </div>
+    <footer><a href="xingcheng.html">完成</a></footer>
+</div>
+</body>
+<script>
+    $(".xingcheng3 .zhuti .list .item").on("click",function () {
+       $(this).toggleClass("active");
+    });
+    $(".xingcheng3 .jinchou .list .item").on("click",function () {
+        $(".xingcheng3 .jinchou .list .item").removeClass("active");
+        $(this).addClass("active");
+    });
+    $(".xingcheng3 .jiudian .list .item").on("click",function () {
+        $(".xingcheng3 .jiudian .list .item").removeClass("active");
+        $(this).addClass("active");
+    });
+</script>
+</html>

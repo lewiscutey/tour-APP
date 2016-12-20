@@ -37,6 +37,9 @@ html, body {
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-uilist:before {
+  content: "\e600"; }
+
 .icon-xiazai:before {
   content: "\e6b7"; }
 
@@ -49,8 +52,20 @@ html, body {
 .icon-kaishi:before {
   content: "\e608"; }
 
+.icon-diliweizhi:before {
+  content: "\e67d"; }
+
+.icon-ziranqiguan:before {
+  content: "\e62e"; }
+
+.icon-gouwu:before {
+  content: "\e669"; }
+
 .icon-wode:before {
   content: "\e6b1"; }
+
+.icon-iconfontmeishi0:before {
+  content: "\e62d"; }
 
 .icon-103:before {
   content: "\e65b"; }
@@ -61,6 +76,9 @@ html, body {
 .icon-free:before {
   content: "\e60e"; }
 
+.icon-qinzi:before {
+  content: "\e61b"; }
+
 .icon-aixin:before {
   content: "\e632"; }
 
@@ -69,6 +87,9 @@ html, body {
 
 .icon-wz:before {
   content: "\e604"; }
+
+.icon-shoucifuwushijian:before {
+  content: "\e6ad"; }
 
 .icon-kaishi1:before {
   content: "\e796"; }
@@ -81,9 +102,6 @@ html, body {
 
 .icon-xiaoxi:before {
   content: "\e60d"; }
-
-.icon-uilist:before {
-  content: "\e600"; }
 
 .swiper-container {
   width: 100%;
@@ -1713,6 +1731,506 @@ html, body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; }
+    .xingcheng .add a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+
+.xingcheng1 {
+  width: 100%; }
+  .xingcheng1 .head {
+    width: 100%;
+    height: 0.88rem;
+    padding: 0 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1b1b22; }
+    .xingcheng1 .head .back {
+      width: 0.54rem;
+      height: 0.54rem;
+      background-image: url("../img/wanle/back.png");
+      background-size: cover;
+      background-repeat: no-repeat; }
+      .xingcheng1 .head .back a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+    .xingcheng1 .head h3 {
+      font-size: 0.4rem;
+      color: #FFFFFF; }
+    .xingcheng1 .head .menu {
+      width: 0.8rem;
+      height: 0.54rem;
+      background-image: url("../img/wanle/menu.png");
+      background-size: cover;
+      background-repeat: no-repeat; }
+  .xingcheng1 .buzhou {
+    width: 100%;
+    height: 1.6rem;
+    padding: 0 0.5rem;
+    margin: 0.2rem auto; }
+    .xingcheng1 .buzhou h2 {
+      font-size: 0.8rem;
+      line-height: 1rem;
+      color: #000000;
+      font-weight: bolder;
+      text-align: left; }
+    .xingcheng1 .buzhou h3 {
+      font-size: 0.4rem;
+      line-height: 0.6rem;
+      color: #000000;
+      font-weight: 500;
+      text-align: left; }
+  .xingcheng1 .chufa {
+    width: 100%;
+    height: 2.2rem;
+    padding: 0 0.5rem; }
+    .xingcheng1 .chufa p {
+      width: 100%;
+      height: 0.8rem; }
+      .xingcheng1 .chufa p img {
+        width: 0.6rem;
+        height: 0.6rem;
+        vertical-align: middle;
+        margin-top: 0.1rem;
+        float: left; }
+      .xingcheng1 .chufa p span {
+        font-size: 0.4rem;
+        line-height: 0.8rem;
+        color: #000000;
+        float: left;
+        margin-left: 0.1rem; }
+    .xingcheng1 .chufa .city {
+      width: 100%;
+      height: 0.9rem;
+      border: 2px solid #2c63ff;
+      border-radius: 0.2rem;
+      margin: 0.25rem auto;
+      text-align: center;
+      font-size: 0.4rem;
+      font-weight: bold;
+      line-height: 0.9rem; }
+  .xingcheng1 .xiangqu {
+    width: 100%;
+    height: 3.4rem;
+    padding: 0 0.5rem; }
+    .xingcheng1 .xiangqu p {
+      width: 100%;
+      height: 0.8rem; }
+      .xingcheng1 .xiangqu p img {
+        width: 0.4rem;
+        height: 0.4rem;
+        vertical-align: middle;
+        margin-top: 0.2rem;
+        float: left; }
+      .xingcheng1 .xiangqu p span {
+        font-size: 0.4rem;
+        line-height: 0.8rem;
+        color: #000000;
+        float: left;
+        margin-left: 0.2rem;
+        font-weight: bold; }
+    .xingcheng1 .xiangqu .city {
+      width: 100%;
+      height: 2.7rem;
+      margin: 0.1rem auto; }
+      .xingcheng1 .xiangqu .city .item {
+        width: 2.2rem;
+        height: 2.2rem;
+        margin: 0.25rem;
+        float: left;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+        .xingcheng1 .xiangqu .city .item .del {
+          width: 0.4rem;
+          height: 0.4rem;
+          position: absolute;
+          top: -0.2rem;
+          right: -0.2rem;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url("../img/xingcheng1/del.png"); }
+        .xingcheng1 .xiangqu .city .item p {
+          color: #FFFFFF;
+          font-size: 0.3rem;
+          position: absolute;
+          bottom: 0;
+          left: 0.1rem;
+          height: 0.4rem; }
+        .xingcheng1 .xiangqu .city .item:nth-child(1) {
+          width: 2.15rem;
+          height: 2.15rem;
+          border-radius: 0.1rem;
+          background-image: url("../img/xingcheng1/item.png"); }
+        .xingcheng1 .xiangqu .city .item:nth-child(2) {
+          background-image: url("../img/xingcheng1/add.png"); }
+  .xingcheng1 .biqu {
+    width: 100%;
+    height: 3.4rem;
+    padding: 0 0.5rem;
+    margin: 0.2rem auto; }
+    .xingcheng1 .biqu p {
+      width: 100%;
+      height: 0.8rem; }
+      .xingcheng1 .biqu p img {
+        width: 0.5rem;
+        height: 0.5rem;
+        vertical-align: middle;
+        margin-top: 0.15rem;
+        float: left; }
+      .xingcheng1 .biqu p span {
+        font-size: 0.4rem;
+        line-height: 0.8rem;
+        color: #000000;
+        float: left;
+        margin-left: 0.1rem;
+        font-weight: bold; }
+    .xingcheng1 .biqu .city {
+      width: 100%;
+      height: 2.7rem;
+      margin: 0.1rem auto; }
+      .xingcheng1 .biqu .city .item {
+        width: 2.2rem;
+        height: 2.2rem;
+        margin: 0.25rem;
+        float: left;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+        .xingcheng1 .biqu .city .item .del {
+          width: 0.33rem;
+          height: 0.33rem;
+          position: absolute;
+          top: -0.16rem;
+          right: -0.16rem;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url("../img/xingcheng1/del.png"); }
+        .xingcheng1 .biqu .city .item p {
+          color: #FFFFFF;
+          font-size: 0.3rem;
+          position: absolute;
+          bottom: 0;
+          left: 0.1rem;
+          height: 0.4rem; }
+        .xingcheng1 .biqu .city .item:nth-child(1) {
+          width: 2.15rem;
+          height: 2.15rem;
+          border-radius: 0.1rem;
+          background-image: url("../img/xingcheng1/item1.png"); }
+        .xingcheng1 .biqu .city .item:nth-child(2) {
+          background-image: url("../img/xingcheng1/add.png"); }
+  .xingcheng1 footer {
+    width: 100%;
+    height: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    background-color: #1b1b22;
+    line-height: 0.9rem;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 0.3rem; }
+    .xingcheng1 footer a {
+      width: 100%;
+      height: 100%;
+      display: block; }
+
+.xingcheng2 {
+  width: 100%; }
+  .xingcheng2 .head {
+    width: 100%;
+    height: 0.88rem;
+    padding: 0 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1b1b22; }
+    .xingcheng2 .head .back {
+      width: 0.54rem;
+      height: 0.54rem;
+      background-image: url("../img/wanle/back.png");
+      background-size: cover;
+      background-repeat: no-repeat; }
+      .xingcheng2 .head .back a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+    .xingcheng2 .head h3 {
+      font-size: 0.4rem;
+      color: #FFFFFF; }
+    .xingcheng2 .head .menu {
+      width: 0.8rem;
+      height: 0.54rem;
+      background-image: url("../img/wanle/menu.png");
+      background-size: cover;
+      background-repeat: no-repeat; }
+  .xingcheng2 .buzhou {
+    width: 100%;
+    height: 1.6rem;
+    padding: 0 0.5rem;
+    margin: 0.2rem auto; }
+    .xingcheng2 .buzhou h2 {
+      font-size: 0.8rem;
+      line-height: 1rem;
+      color: #000000;
+      font-weight: bolder;
+      text-align: left; }
+    .xingcheng2 .buzhou h3 {
+      font-size: 0.4rem;
+      line-height: 0.6rem;
+      color: #000000;
+      font-weight: 500;
+      text-align: left; }
+  .xingcheng2 .chufa {
+    width: 100%;
+    height: 2.2rem;
+    padding: 0 0.5rem; }
+    .xingcheng2 .chufa p {
+      width: 100%;
+      height: 0.8rem; }
+      .xingcheng2 .chufa p img {
+        width: 0.4rem;
+        height: 0.4rem;
+        vertical-align: middle;
+        margin-top: 0.2rem;
+        float: left; }
+      .xingcheng2 .chufa p span {
+        font-size: 0.4rem;
+        line-height: 0.8rem;
+        color: #000000;
+        float: left;
+        margin-left: 0.1rem;
+        font-weight: bold; }
+    .xingcheng2 .chufa .city {
+      width: 100%;
+      height: 0.9rem;
+      border: 2px solid #2c63ff;
+      border-radius: 0.2rem;
+      margin: 0.25rem auto;
+      text-align: center;
+      font-size: 0.4rem;
+      font-weight: bold;
+      line-height: 0.9rem;
+      position: relative; }
+      .xingcheng2 .chufa .city .xiala {
+        width: 0.5rem;
+        height: 0.5rem;
+        background-image: url("../img/xingcheng1/xiala.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0.15rem;
+        right: 0.2rem;
+        z-index: -1; }
+      .xingcheng2 .chufa .city input {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%; }
+  .xingcheng2 footer {
+    width: 100%;
+    height: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    background-color: #1b1b22;
+    line-height: 0.9rem;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 0.3rem; }
+    .xingcheng2 footer a {
+      width: 100%;
+      height: 100%;
+      display: block; }
+
+.xingcheng3 {
+  width: 100%; }
+  .xingcheng3 .head {
+    width: 100%;
+    height: 0.88rem;
+    padding: 0 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1b1b22; }
+    .xingcheng3 .head .back {
+      width: 0.54rem;
+      height: 0.54rem;
+      background-image: url("../img/wanle/back.png");
+      background-size: cover;
+      background-repeat: no-repeat; }
+      .xingcheng3 .head .back a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+    .xingcheng3 .head h3 {
+      font-size: 0.4rem;
+      color: #FFFFFF; }
+    .xingcheng3 .head .menu {
+      width: 0.8rem;
+      height: 0.54rem;
+      background-image: url("../img/wanle/menu.png");
+      background-size: cover;
+      background-repeat: no-repeat; }
+  .xingcheng3 .buzhou {
+    width: 100%;
+    height: 1.6rem;
+    padding: 0 0.5rem;
+    margin: 0.2rem auto; }
+    .xingcheng3 .buzhou h2 {
+      font-size: 0.8rem;
+      line-height: 1rem;
+      color: #000000;
+      font-weight: bolder;
+      text-align: left; }
+    .xingcheng3 .buzhou h3 {
+      font-size: 0.4rem;
+      line-height: 0.6rem;
+      color: #000000;
+      font-weight: 500;
+      text-align: left; }
+  .xingcheng3 .zhuti {
+    width: 100%;
+    height: 3.5rem;
+    padding: 0 0.5rem; }
+    .xingcheng3 .zhuti p {
+      width: 100%;
+      height: 0.8rem; }
+      .xingcheng3 .zhuti p img {
+        width: 0.4rem;
+        height: 0.4rem;
+        vertical-align: middle;
+        margin-top: 0.2rem;
+        float: left; }
+      .xingcheng3 .zhuti p span {
+        font-size: 0.4rem;
+        line-height: 0.8rem;
+        color: #000000;
+        float: left;
+        margin-left: 0.1rem;
+        font-weight: bold; }
+    .xingcheng3 .zhuti .list {
+      width: 100%;
+      height: 2.1rem;
+      margin: 0.3rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-content: space-between;
+      flex-wrap: wrap; }
+      .xingcheng3 .zhuti .list .item {
+        width: 2rem;
+        height: 0.9rem;
+        border-radius: 0.15rem;
+        border: 1px solid #4e7dff;
+        text-align: center;
+        line-height: 0.9rem;
+        font-size: 0.3rem;
+        color: #4e7dff;
+        margin-bottom: 0.3rem; }
+        .xingcheng3 .zhuti .list .item.active {
+          background-color: #1c1c23;
+          color: #FFFFFF; }
+  .xingcheng3 .jinchou {
+    width: 100%;
+    height: 2.2rem;
+    padding: 0 0.5rem;
+    margin: 0.5rem auto; }
+    .xingcheng3 .jinchou p {
+      width: 100%;
+      height: 0.8rem; }
+      .xingcheng3 .jinchou p img {
+        width: 0.4rem;
+        height: 0.4rem;
+        vertical-align: middle;
+        margin-top: 0.2rem;
+        float: left; }
+      .xingcheng3 .jinchou p span {
+        font-size: 0.4rem;
+        line-height: 0.8rem;
+        color: #000000;
+        float: left;
+        margin-left: 0.1rem;
+        font-weight: bold; }
+    .xingcheng3 .jinchou .list {
+      width: 100%;
+      height: 1rem;
+      margin: 0.2rem auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .xingcheng3 .jinchou .list .item {
+        line-height: 1rem;
+        font-size: 0.3rem;
+        width: 1rem;
+        height: 1rem;
+        text-align: center;
+        color: #1c1c23; }
+        .xingcheng3 .jinchou .list .item.active {
+          background-color: #1c1c23;
+          color: #FFFFFF;
+          border-radius: 50%; }
+  .xingcheng3 .jiudian {
+    width: 100%;
+    height: 2.2rem;
+    padding: 0 0.5rem;
+    margin: 0.5rem auto; }
+    .xingcheng3 .jiudian p {
+      width: 100%;
+      height: 0.8rem; }
+      .xingcheng3 .jiudian p img {
+        width: 0.4rem;
+        height: 0.4rem;
+        vertical-align: middle;
+        margin-top: 0.2rem;
+        float: left; }
+      .xingcheng3 .jiudian p span {
+        font-size: 0.4rem;
+        line-height: 0.8rem;
+        color: #000000;
+        float: left;
+        margin-left: 0.1rem;
+        font-weight: bold; }
+    .xingcheng3 .jiudian .list {
+      width: 100%;
+      height: 1rem;
+      margin: 0.2rem auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .xingcheng3 .jiudian .list .item {
+        line-height: 1rem;
+        font-size: 0.3rem;
+        width: 1rem;
+        height: 1rem;
+        text-align: center;
+        color: #1c1c23; }
+        .xingcheng3 .jiudian .list .item.active {
+          background-color: #1c1c23;
+          color: #FFFFFF;
+          border-radius: 50%; }
+  .xingcheng3 footer {
+    width: 100%;
+    height: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    background-color: #1b1b22;
+    line-height: 0.9rem;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 0.3rem; }
+    .xingcheng3 footer a {
+      width: 100%;
+      height: 100%;
+      display: block; }
 
 .tiezi {
   width: 100%; }
